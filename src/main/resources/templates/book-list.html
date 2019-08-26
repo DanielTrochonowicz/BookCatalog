@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+        <title class="titlebar">BookCatalog</title>
+
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+
+<body>
+
+<nav class="navbar navbar-light bg-light">
+    <span class="navbar-brand mb-0 h1">BookCatalog</span>
+</nav>
+
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h5>Books</h5>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Title</th>
+<!--            <th scope="col">Isbn</th>-->
+<!--            <th scope="col">Description</th>-->
+<!--            <th scope="col">Year</th>-->
+            <th scope="col">Author</th>
+            <th scope="col">Details</th>
+            <th scope="col">Delete</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="book: ${books}">
+
+            <td th:text="${book.id}"/>
+            <td th:text="${book.title}"/>
+<!--            <td th:text="${book.isbn}"/>-->
+<!--            <td th:text="${book.description}"/>-->
+<!--            <td th:text="${book.year}"/>-->
+            <td th:text="${book.author}"/>
+            <td>
+                <a th:href="@{'/book-detail?id=' + ${book.id}}" class="btn btn-outline-success">Details</a>
+            </td>
+            <td>
+                <form method="post" th:action="@{/delete-book}" th:object="${book}">
+                    <input type="hidden" th:value="*{id}" id="book_id" name="id"/>
+                <button class="btn btn-outline-danger">Delete</button>
+            </form>
+            </td>
+        </tr>
+    </table>
+    <a href = "http://localhost:8087/add-book" ><button type="button" class="btn btn-outline-secondary">Add Book</button></a>
+</div>
+
+<h2><footer> Copyright &#169 2019 Daniel Trochonowicz </footer></h2>
+
+
+</body>
+</html>
