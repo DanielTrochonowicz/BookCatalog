@@ -5,24 +5,34 @@
     <meta charset="UTF-8">
         <title class="titlebar">BookCatalog</title>
 
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/sketchy/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-N8DsABZCqc1XWbg/bAlIDk7AS/yNzT5fcKzg/TwfmTuUqZhGquVmpb5VvfmLcMzp"
           crossorigin="anonymous">
+<!--    <link rel="stylesheet"-->
+<!--          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"-->
+<!--          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"-->
+<!--          crossorigin="anonymous">-->
 
-    <link rel="stylesheet" href="css/style.css">
+<!--    <link rel="stylesheet" href="css/style.css">-->
 </head>
 <body>
 
 <nav class="navbar navbar-light bg-light">
-    <span class="navbar-brand mb-0 h1">BookCatalog</span>
+
+    <span class="navbar-brand mb-0 h1" >BookCatalog</span>
 
 </nav> <br>
 
 <div class="container">
     <div class="row">
         <div class="col">
+            <form class="form-group my-2 my-lg-0">
+                <input class="form-group col-md-2 mr-sm-4" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
             <h5>Books</h5>
+
         </div>
     </div>
     <table class="table">
@@ -61,7 +71,7 @@
     <a th:href="@{/add-book}" ><button type="button" class="btn btn-outline-secondary">Add Book</button></a>
 </div>
 
-<h2><footer> Copyright &#169 2019 Daniel Trochonowicz </footer></h2>
+<h2><footer class="text-center"> Copyright &#169 2019 Daniel Trochonowicz </footer></h2>
 
 </body>
 </html>
