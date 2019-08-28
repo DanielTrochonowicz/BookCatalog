@@ -11,18 +11,13 @@
           crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/style.css">
-
-
 </head>
-
-
 <body>
 
 <nav class="navbar navbar-light bg-light">
     <span class="navbar-brand mb-0 h1">BookCatalog</span>
-</nav>
 
-<br>
+</nav> <br>
 
 <div class="container">
     <div class="row">
@@ -41,7 +36,6 @@
             <th scope="col">Author</th>
             <th scope="col">Details</th>
             <th scope="col">Delete</th>
-
         </tr>
         </thead>
         <tbody>
@@ -64,11 +58,10 @@
             </td>
         </tr>
     </table>
-    <a href = "http://localhost:8087/add-book" ><button type="button" class="btn btn-outline-secondary">Add Book</button></a>
+    <a th:href="@{/add-book}" ><button type="button" class="btn btn-outline-secondary">Add Book</button></a>
 </div>
 
 <h2><footer> Copyright &#169 2019 Daniel Trochonowicz </footer></h2>
-
 
 </body>
 </html>

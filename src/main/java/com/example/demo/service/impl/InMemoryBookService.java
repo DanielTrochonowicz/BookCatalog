@@ -45,7 +45,7 @@ class InMemoryBookService implements BookService {
             2012, "Michael Dawson"));
         books.put(5L, new Book(5L, "Klatka", "73425342", "Siedem osób. Wszyscy zamknięci w ciasnym budynku, dzień po dniu oddalają się od rzeczywistości. Łączą ich studia we Wrocławiu. Dzieli wszystko inne. Początkowo są pewni siebie i otwarci na nowe doznania, chętnie rzucają się w maraton niekończących się imprez. Jednak beztroska atmosfera szybko mija. Ciągłe towarzystwo tych samych ludzi. Zamroczenie używkami. Brak perspektyw. Kompleksy. Strach..",
                 2013, "Lilja Sigurdardottir"));
-        books.put(6L, new Book(6L, "Flota Alfa", "24325342", "Kapitanowi Leo Blake’owi ludzkość zawdzięcza zarówno swoje przetrwanie, jak i obecne kłopoty. Gdy nad Ziemią ze świetlistych wyrw w czasoprzestrzeni wyłaniają się tajemnicze okręty, sławny dowódca zostaje ponownie wezwany do czynnej służby. Nowo przybyła flota nie jest jednak tym, czym się wydaje, a Blake nie ma pewności, czy dotychczasowi sojusznicy ludzkości są godni zaufania. Każdy błąd.",
+        books.put(6L, new Book(6L, "Flota Alfa", "Tom: 1", "Kapitanowi Leo Blake’owi ludzkość zawdzięcza zarówno swoje przetrwanie, jak i obecne kłopoty. Gdy nad Ziemią ze świetlistych wyrw w czasoprzestrzeni wyłaniają się tajemnicze okręty, sławny dowódca zostaje ponownie wezwany do czynnej służby. Nowo przybyła flota nie jest jednak tym, czym się wydaje, a Blake nie ma pewności, czy dotychczasowi sojusznicy ludzkości są godni zaufania. Każdy błąd.",
                 2017, "B.V. Larson"));
 
      // Collections.sort(books, Comparator.comparing(b -> b.getId));

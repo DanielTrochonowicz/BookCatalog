@@ -78,11 +78,18 @@ public class BookControler {
         return modelAndView;
     }
 
-    @PostMapping("save-book")
-    public ModelAndView saveBooks(@ModelAttribute Book book){
+    @PostMapping("add-book")
+    public ModelAndView addBook(@ModelAttribute Book book){
         bookService.addBook(book);
         return new ModelAndView("redirect:/book-list");
     }
+//    @PostMapping("add-book")
+//    public ModelAndView addBook(@ModelAttribute Book book) {
+//        ModelAndView modelAndView = new ModelAndView("redirect:/book-list");
+//        bookService.addBook(book);
+//        modelAndView.addObject("book", new Book());
+//        return modelAndView;
+//    }
 
     @PostMapping("delete-book")
     public ModelAndView deleteBook(@ModelAttribute Book book){

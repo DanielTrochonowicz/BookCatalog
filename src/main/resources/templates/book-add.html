@@ -11,17 +11,12 @@
           crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/style.css">
-
-
 </head>
-
 <body>
 
 <nav class="navbar navbar-light bg-light">
     <span class="navbar-brand mb-0 h1">BookCatalog</span>
-</nav>
-
-<br>
+</nav> <br>
 
 <div class="container">
     <div class="row">
@@ -29,7 +24,7 @@
             <h5>New Book</h5>
         </div>
     </div>
-    <form method="post" action="#" th:action="@{/add-book}" th:object="${book}">
+    <form th:method="post" th:action="@{/add-book}" th:object="${book}">
         <table class="table">
             <tbody>
             <tr>
@@ -64,10 +59,13 @@
             </tr>
             <tr>
                 <td >
-                    <a href = "http://localhost:8087/book-list" ><button type="button" class="btn btn-outline-secondary">Back to book list</button></a>
-                </td>
+                    <a th:href="@{/book-list}" ><button type="button" class="btn btn-outline-secondary">Back To Book List</button></a>
+                    </td>
                 <td class="text-right">
-                    <input type="button" class="btn btn-outline-success" value="Submit" />
+                   <form >
+                        <input type="reset" class="btn btn-outline-warning" value="Reset">
+                        <input type="submit" class="btn btn-outline-success" th:value="Submit" />
+                    </form>
                 </td>
             </tr>
         </table>
@@ -75,7 +73,6 @@
    </div>
 
 <h2><footer> Copyright &#169 2019 Daniel Trochonowicz </footer></h2>
-
 
 </body>
 </html>

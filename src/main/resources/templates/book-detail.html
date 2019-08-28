@@ -7,13 +7,13 @@
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
           crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
 <nav class="navbar navbar-light bg-light">
     <span class="navbar-brand mb-0 h1">BookCatalog</span>
-</nav> <br>
+</nav>
+<br>
 <div class="container">
     <div class="row">
         <div class="col">
@@ -21,12 +21,9 @@
         </div>
     </div>
     <table class="table">
-        <thead>
-        <tr></tr>
-        </thead>
         <tbody>
-        <tr>
-            <td>Title</td>
+            <tr>
+                <td th:text="title">Title</td>
             <td th:text="${book.title}"/>
         </tr>
         <tr>
@@ -50,9 +47,15 @@
             <td th:text="${book.isbn}"/>
         </tr>
     </table>
+    <td>
+        <a th:href="@{/book-list}" ><button type="button" class="btn btn-outline-secondary">Back to book list</button></a>
+        <td>
+        <form class="text-right">
+            <button type="button" class="btn btn-outline-warning">Update Book</button>
+        </form>
+    </td>
+    </td>
 
-    <a href = "http://localhost:8087/book-list" ><button type="button" class="btn btn-outline-secondary">Back to book list</button></a>
 </div>
-<h2><footer> Copyright &#169 2019 Daniel Trochonowicz </footer></h2>
 </body>
 </html>
