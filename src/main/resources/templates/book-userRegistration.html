@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <title class="titlebar">User Registration</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/sketchy/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-N8DsABZCqc1XWbg/bAlIDk7AS/yNzT5fcKzg/TwfmTuUqZhGquVmpb5VvfmLcMzp"
+          crossorigin="anonymous">
+    <!--    <link rel="stylesheet"-->
+    <!--          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"-->
+    <!--          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"-->
+    <!--          crossorigin="anonymous">-->
+
+        <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-light bg-light">
+
+    <span class="navbar-brand mb-0 h1" >User Registration</span>
+
+</nav> <br>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h5></h5>
+        </div>
+    </div>
+    <div class="formula">
+        <fieldset class="borderRegistration">
+            <legend class="legendRegistration legendLogin">
+        <h1>User Registration</h1>
+            </legend>
+        <form action="formRegistration" method="POST">
+            <div>First name:</div> <input type="text" name="fname" placeholder="First Name" autocomplete="on"><br>
+            <div>Last name:</div> <input type="text" name="fname" placeholder="Last Name" autocomplete="on"><br>
+            <div>Email:</div> <input type="email" email="email" placeholder="Email" autocomplete="on"><br>
+            <div>Password:</div> <input type="password" password="password" placeholder="Password" autocomplete="on"><br>
+            <div>Password Again:</div><input type="password" password again="password again" placeholder="Password Again" autocomplete="on"><br>
+<!--            <div>Comment: </div><textarea rows="2" cols="40"></textarea>-->
+            <div></div>
+            <tr>
+            <td class="text-right">
+                <form >
+                    <input type="reset" class="btn btn-outline-warning " value="Reset">
+                    <input type="submit" class="btn btn-outline-success " value="Sing up" />
+                </form>
+            </td>
+            </tr>
+        </form>
+        </fieldset>
+            <fieldset class="borderRegistration">
+            <tr class="br brRight brLef">
+                <td >
+                    <div class="shadowLogin"><h3>Have an account?</h3></div><a  th:href="@{/book-userLogin}" ><button type="button" class="btn btn-outline-secondary">Log in</button></a>
+                </td>
+            </tr>
+        </fieldset>
+    </div>
+</div>
+
+<h2><footer > Copyright &#169 2019 Daniel Trochonowicz </footer></h2>
+
+</body>
+</html>

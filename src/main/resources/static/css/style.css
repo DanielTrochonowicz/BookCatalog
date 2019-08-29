@@ -1,8 +1,70 @@
 
 footer{
-    font-size: 20px;
-    margin-top: 4rem;
-    padding: 1rem;
+    text-shadow: 4px 3px 2px #ff0000;
+    position: absolute;
     text-align: center;
-    color: #884c4c;
+    height: 30px;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 25px;
+}
+.spanCenter{
+    text-align: center;
+}
+.shadowLogin{
+    text-shadow: 4px 3px 2px #ff0000;
+}
+.formula{
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.buttonRight{
+    float: right;
+}
+.searchRight{
+    float: right;
+}
+.borderRegistration{
+    box-shadow: 2px 2px #ff0000;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    padding: 3px;
+    margin-left: 350px;
+    margin-right: 350px;
+    border-spacing: 40px;
+    margin-top: 10px;
+}
+.legendRegistration{
+    box-shadow: 2px 2px #ff0000;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    padding: 3px;
+    margin-left: 380px;
+    margin-right: 380px;
+    border-spacing: 40px;
+    margin-top: 10px;
+}
+.borderLogin{
+    Border-left: 1px solid black
+}
+.legendLogin{
+    text-shadow: 2px 2px 2px #ff0000;
+    text-align: center;
+    padding: 10px
+}
+.br{
+    padding: 15px;
+}
+
+.brLef{
+    padding: 20px;
+}
+
+.brRight{
+    padding: 20px;
 }

@@ -61,9 +61,19 @@ public class BookControler {
         return modelAndViewBook;
     }
 
+    @GetMapping("book-userLogin")
+    public ModelAndView bookLogin(){
+       return new ModelAndView("book-userLogin");
+    }
+
+    @GetMapping("book-userRegistration")
+    public ModelAndView userRegistration(){
+        return new ModelAndView("book-userRegistration");
+    }
+
     @GetMapping("/")
     public ModelAndView index() {
-        return new ModelAndView("redirect:/book-list");
+        return new ModelAndView("redirect:/book-userLogin");
     }
 
 //    @GetMapping("/")
@@ -71,14 +81,14 @@ public class BookControler {
 //        return new ModelAndView("forward:/books");  !! never add commented code !!
 //    }
 
-    @GetMapping("add-book")
+    @GetMapping("book-add")
     public ModelAndView updateBook() {
         ModelAndView modelAndView = new ModelAndView("book-add");
         modelAndView.addObject("book", new Book());
         return modelAndView;
     }
 
-    @PostMapping("add-book")
+    @PostMapping("book-add")
     public ModelAndView addBook(@ModelAttribute Book book){
         bookService.addBook(book);
         return new ModelAndView("redirect:/book-list");
