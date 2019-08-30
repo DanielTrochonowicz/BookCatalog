@@ -1,5 +1,6 @@
 package com.example.demo.service;
 import com.example.demo.model.Book;
+
 import java.util.List;
 
 public interface BookService {
@@ -11,4 +12,5 @@ public interface BookService {
    void removeBook(Long id);
 
    Book addBook(Book book);
+
 }

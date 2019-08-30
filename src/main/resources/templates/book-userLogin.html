@@ -13,37 +13,38 @@
     <!--          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"-->
     <!--          crossorigin="anonymous">-->
 
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
+<!--<nav class="navbar navbar-light bg-light spanCenter">-->
 
-<nav class="navbar navbar-light bg-light">
+<!--    <span class="navbar-brand mb-0 h1" >BookCatalogLogin</span>-->
 
-    <span class="navbar-brand mb-0 h1" >BookCatalogLogin</span>
+<!--</nav> <br>-->
 
-</nav> <br>
+<div class="container marginTopBoxLogin">
+    <div class="formula ">
 
-<div class="container">
-    <div class="formula">
+
         <fieldset class="borderRegistration">
-            <legend class="legendRegistration legendLogin ">
-        <h1>Book Catalog Login</h1>
+            <legend class="legendRegistration legendLogin">
+        <h1>Book Catalog </h1>
             </legend>
         <form action="formRegistration" method="POST">
             <div>Login:</div> <input type="email" email="email" placeholder="Email Login" autocomplete="on"><br>
             <div>Password:</div> <input type="password" password="password" placeholder="Password" autocomplete="on"><br>
 
             <td class="p">
-                <button class="btn btn-outline-success" type="submit" value="Submit"> Login </button>
-                <button class="btn btn-outline-warning" type="reset" value="Reset">  Reset</button>
-             </td>
+                <button class="btn btn-outline-warning buttonTopLogin" type="reset" value="Reset">  Reset</button>
+                <button class="btn btn-outline-success buttonTopLogin" type="submit" value="Submit"> Login </button>
+            </td>
 
         </form>
         </fieldset>
         <fieldset class="borderRegistration">
             <tr class="br brRight brLef">
                 <td >
-                    <div class="shadowLogin"><h3>Don't have an account?</h3></div> <a th:href="@{/book-userRegistration}" ><button type="button" class="btn btn-outline-secondary ">Registration</button></a>
+                    <div class="shadowText"><h3>Don't have an account?</h3></div> <a th:href="@{/book-userRegistration}" ><button type="button" class="btn btn-outline-secondary ">Registration</button></a>
                 </td>
             </tr>
         </fieldset>

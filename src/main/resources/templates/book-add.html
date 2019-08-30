@@ -19,17 +19,17 @@
 <body>
 
 <nav class="navbar navbar-light bg-light">
-    <span class="navbar-brand mb-0 h1 shadowLogin spanCenter">BookCatalog</span>
+    <span class="navbar-brand mb-0 h1 shadowText ">BookCatalog</span>
 </nav> <br>
 
-<div class="container">
+<div class="container marginTopBoxNewBook">
     <div class="row">
         <div class="col">
-            <h5 class="shadowLogin">New Book</h5>
+            <h5>New Book</h5>
         </div>
     </div>
     <form th:method="post" th:action="@{/book-add}" th:object="${book}">
-        <table class="table shadowLogin">
+        <table class="table">
             <tbody>
             <tr>
                 <td th:text="Title"/>

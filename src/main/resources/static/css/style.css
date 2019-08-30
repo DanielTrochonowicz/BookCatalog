@@ -1,17 +1,58 @@
+*{
+    margin: 0;
+    padding: 0
+}
+html{
+    position: relative;
+    min-height: 100%;
+}
 
+body{
+    margin-bottom: 30px;
+
+}
 footer{
-    text-shadow: 4px 3px 2px #ff0000;
-    position: absolute;
-    text-align: center;
-    height: 30px;
-    bottom: 0;
+    /*position: relative;*/
     width: 100%;
-    margin-bottom: 25px;
+    height: 30px;
+    left: 0;
+    text-align: center;
+    text-shadow: 4px 3px 2px #ff0000;
+    bottom: 0px;
 }
+
+.layoutLoginFoto{
+    background-image: url("css/2.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
 .spanCenter{
+    margin-top: 60px;
+    /*font-size: 130px;*/
+    text-shadow: 2px 2px 2px #ff0000;
     text-align: center;
 }
-.shadowLogin{
+.marginTopBoxLogin{
+    margin-top: 200px;
+}
+.marginTopBoxRegistration{
+    margin-top: 100px;
+}
+.marginTopBoxNewBook{
+    margin-top: 100px;
+}
+.marginTopBoxBooks{
+    margin-top: 50px;
+}
+.buttonTopLogin{
+    margin-top: 10px;
+}
+.buttonTopRegistration{
+    margin-top: 10px;
+}
+.shadowText{
     text-shadow: 4px 3px 2px #ff0000;
 }
 .formula{
@@ -56,15 +97,4 @@ footer{
     text-shadow: 2px 2px 2px #ff0000;
     text-align: center;
     padding: 10px
-}
-.br{
-    padding: 15px;
-}
-
-.brLef{
-    padding: 20px;
-}
-
-.brRight{
-    padding: 20px;
 }

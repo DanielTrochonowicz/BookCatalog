@@ -4,7 +4,6 @@ import com.example.demo.model.Book;
 import com.example.demo.repository.BookRepository;
 import com.example.demo.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -57,7 +56,6 @@ public class DBBookService implements BookService {
                 2013, "Lilja Sigurdardottir"));
         repository.save(new Book(6L, "Flota Alfa", "24325342", "Kapitanowi Leo Blake’owi ludzkość zawdzięcza zarówno swoje przetrwanie, jak i obecne kłopoty. Gdy nad Ziemią ze świetlistych wyrw w czasoprzestrzeni wyłaniają się tajemnicze okręty, sławny dowódca zostaje ponownie wezwany do czynnej służby. Nowo przybyła flota nie jest jednak tym, czym się wydaje, a Blake nie ma pewności, czy dotychczasowi sojusznicy ludzkości są godni zaufania. Każdy błąd.",
                 2017, "B.V. Larson"));
-
     }
 
     @Autowired
@@ -84,4 +82,5 @@ public class DBBookService implements BookService {
     public Book addBook(Book book) {
         return repository.save(book);
     }
+
 }

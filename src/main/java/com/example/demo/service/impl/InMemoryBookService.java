@@ -10,7 +10,8 @@ import java.util.*;
 class InMemoryBookService implements BookService {
 
     private Map<Long, Book> books;
-  //  private Book book;
+
+    //  private Book book;
 
     {
         books = new HashMap<>();
@@ -41,15 +42,15 @@ class InMemoryBookService implements BookService {
         books.put(3L, new Book(3L, "Microsoft SQL Server 2014", "32415342", "Microsoft SQL Server 2014 to najnowsza wersja serwera bazodanowego firmy Microsoft. Ta platforma jest rozwijana od ponad 25 lat, a każda kolejna jej wersja wprowadza serię ulepszeń — zarówno w obszarze możliwości, jak i wydajności. Jednak sam rozwój serwera nie wystarczy, żeby błyskawicznie wyciągać z bazy danych kluczowe informacje. Konieczna jest także optymalizacja parametrów jego pracy oraz zadawanych zapytań SQL.",
                 2014, "Benjamin Nevarez"));
         books.put(4L, new Book(4L, "Python dla każdego", "89025342", "Wcześniejsze doświadczenie nie jest wymagane, aby nauczyć się programowania w Pythonie\n" +
-            "Chcesz się nauczyć programować? Świetna decyzja! Wybierz język obiektowy, łatwy w użyciu, z przejrzystą składnią. Python będzie wprost doskonały! Rozwijany od ponad 20 lat, jest dojrzałym językiem, pozwalającym tworzyć zaawansowane aplikacje dla różnych systemów operacyjnych. Ponadto posiada system automatycznego zarządzania pamięcią, który zdejmuje z programisty obowiązek panowania nad tym skomplikowanym obszarem.",
-            2012, "Michael Dawson"));
+                "Chcesz się nauczyć programować? Świetna decyzja! Wybierz język obiektowy, łatwy w użyciu, z przejrzystą składnią. Python będzie wprost doskonały! Rozwijany od ponad 20 lat, jest dojrzałym językiem, pozwalającym tworzyć zaawansowane aplikacje dla różnych systemów operacyjnych. Ponadto posiada system automatycznego zarządzania pamięcią, który zdejmuje z programisty obowiązek panowania nad tym skomplikowanym obszarem.",
+                2012, "Michael Dawson"));
         books.put(5L, new Book(5L, "Klatka", "73425342", "Siedem osób. Wszyscy zamknięci w ciasnym budynku, dzień po dniu oddalają się od rzeczywistości. Łączą ich studia we Wrocławiu. Dzieli wszystko inne. Początkowo są pewni siebie i otwarci na nowe doznania, chętnie rzucają się w maraton niekończących się imprez. Jednak beztroska atmosfera szybko mija. Ciągłe towarzystwo tych samych ludzi. Zamroczenie używkami. Brak perspektyw. Kompleksy. Strach..",
                 2013, "Lilja Sigurdardottir"));
         books.put(6L, new Book(6L, "Flota Alfa", "Tom: 1", "Kapitanowi Leo Blake’owi ludzkość zawdzięcza zarówno swoje przetrwanie, jak i obecne kłopoty. Gdy nad Ziemią ze świetlistych wyrw w czasoprzestrzeni wyłaniają się tajemnicze okręty, sławny dowódca zostaje ponownie wezwany do czynnej służby. Nowo przybyła flota nie jest jednak tym, czym się wydaje, a Blake nie ma pewności, czy dotychczasowi sojusznicy ludzkości są godni zaufania. Każdy błąd.",
                 2017, "B.V. Larson"));
 
-     // Collections.sort(books, Comparator.comparing(b -> b.getId));
-    //   Collections.sort(books, Comparator.comparing(Book::getId));
+        // Collections.sort(books, Comparator.comparing(b -> b.getId));
+        //   Collections.sort(books, Comparator.comparing(Book::getId));
 
 //        book = new Book();
 //        book.setTitle("Rana");
@@ -61,7 +62,7 @@ class InMemoryBookService implements BookService {
     }
 
     @Override
-    public List<Book> getBooks(){
+    public List<Book> getBooks() {
         return new ArrayList<>(books.values());
     }
 
@@ -78,17 +79,19 @@ class InMemoryBookService implements BookService {
     @Override
     public Book addBook(Book book) {
         Long id = book.getId();
-        if (book.getId() == null){
+        if (book.getId() == null) {
             id = generateId();
         }
         book.setId(id);
         return books.put(id, book);
     }
-    private Long generateId(){
+
+    private Long generateId() {
         long max = 0;
-        for (long key: books.keySet()){
+        for (long key : books.keySet()) {
             max = Math.max(max, key);
         }
         return max + 1;
     }
 }
+

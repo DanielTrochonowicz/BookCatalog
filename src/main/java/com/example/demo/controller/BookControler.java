@@ -47,6 +47,7 @@ public class BookControler {
 //        book.setIsbn("Tom: 1");
 //        book.setId(1l);
 //    }
+
     @GetMapping("book-list")
     public ModelAndView listBook(){
         ModelAndView modelAndView = new ModelAndView("book-list");

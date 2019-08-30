@@ -17,12 +17,10 @@
 </head>
 <body>
 
-<nav class="navbar navbar-light bg-light">
-
-    <span class="navbar-brand mb-0 h1" >User Registration</span>
-
-</nav> <br>
-<div class="container">
+    <!--<nav class="navbar navbar-light bg-light">-->
+    <!--    <span class="navbar-brand mb-0 h1" >User Registration</span>-->
+    <!--</nav> <br>-->
+<div class="container marginTopBoxRegistration">
     <div class="row">
         <div class="col">
             <h5></h5>
@@ -44,8 +42,8 @@
             <tr>
             <td class="text-right">
                 <form >
-                    <input type="reset" class="btn btn-outline-warning " value="Reset">
-                    <input type="submit" class="btn btn-outline-success " value="Sing up" />
+                    <input type="reset" class="btn btn-outline-warning buttonTopRegistration" value="Reset">
+                    <input type="submit" class="btn btn-outline-success buttonTopRegistration " value="Sing up" />
                 </form>
             </td>
             </tr>
@@ -54,14 +52,14 @@
             <fieldset class="borderRegistration">
             <tr class="br brRight brLef">
                 <td >
-                    <div class="shadowLogin"><h3>Have an account?</h3></div><a  th:href="@{/book-userLogin}" ><button type="button" class="btn btn-outline-secondary">Log in</button></a>
+                    <div class="shadowText"><h3>Have an account?</h3></div><a  th:href="@{/book-userLogin}" ><button type="button" class="btn btn-outline-secondary">Log in</button></a>
                 </td>
             </tr>
         </fieldset>
     </div>
 </div>
 
-<h2><footer > Copyright &#169 2019 Daniel Trochonowicz </footer></h2>
+    <h2><footer >Copyright &#169 2019 Daniel Trochonowicz</footer></h2>
 
 </body>
 </html>
