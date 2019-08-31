@@ -1,10 +1,12 @@
 package com.example.demo.controller;
 
 import com.example.demo.model.Book;
+import com.example.demo.model.User;
 import com.example.demo.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -48,6 +50,11 @@ public class BookControler {
 //        book.setId(1l);
 //    }
 
+    @GetMapping("/")
+    public ModelAndView index() {
+        return new ModelAndView("redirect:/book-userLogin");
+    }
+
     @GetMapping("book-list")
     public ModelAndView listBook(){
         ModelAndView modelAndView = new ModelAndView("book-list");
@@ -72,10 +79,6 @@ public class BookControler {
         return new ModelAndView("book-userRegistration");
     }
 
-    @GetMapping("/")
-    public ModelAndView index() {
-        return new ModelAndView("redirect:/book-userLogin");
-    }
 
 //    @GetMapping("/")
 //    public ModelAndView forward() {
@@ -107,4 +110,15 @@ public class BookControler {
         bookService.removeBook(book.getId());
         return new ModelAndView("redirect:/book-list");
     }
+
+//    @GetMapping("/book-userRegistration")
+//    public String userRegistrationGet(Model modelUser){
+//        modelUser.addAttribute("user", new User());
+//        return "book-userRegistration";
+//    }
+//
+//    @PostMapping("/book-sukcesUserRegistration")
+//    public String userRegistrationPost(@ModelAttribute User user){
+//        return "book-sukcesUserRegistration";
+//    }
 }

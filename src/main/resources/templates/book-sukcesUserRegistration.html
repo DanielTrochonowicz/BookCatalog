@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <title class="titlebar">BookCatalog</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/sketchy/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-N8DsABZCqc1XWbg/bAlIDk7AS/yNzT5fcKzg/TwfmTuUqZhGquVmpb5VvfmLcMzp"
+          crossorigin="anonymous">
+    <!--    <link rel="stylesheet"-->
+    <!--          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"-->
+    <!--          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"-->
+    <!--          crossorigin="anonymous">-->
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-light bg-light">
+    <span class="navbar-brand mb-0 h1 shadowText" >userRegistration</span>
+</nav>
+
+<div class="container marginTopBoxBooks">
+    <div class="row">
+        <div class="col">
+            <h5>Users</h5>
+
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col ">First Name</th>
+            <th scope="col ">Last Name</th>
+            <th scope="col ">Email</th>
+            <th scope="col ">Password</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="user: ${books}">
+            <td th:text="${user.firstName}"/>
+        </tr>
+        <tr th:each="book: ${books}">
+            <td th:text="${user.firstName}"/>
+        </tr>
+    </table>
+    <a th:href="@{/book-userLogin}" ><button type="button" class="btn btn-outline-secondary">Back To Login</button></a>
+</div>
+
+<h2><footer > Copyright &#169 2019 Daniel Trochonowicz </footer></h2>
+
+</body>
+</html>
