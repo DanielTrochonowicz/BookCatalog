@@ -71,11 +71,11 @@ public class BookController {
     public ModelAndView bookLogin(){
        return new ModelAndView("book-userLogin");
     }
-
-    @GetMapping("book-userRegistration")
-    public ModelAndView userRegistration(){
-        return new ModelAndView("book-userRegistration");
-    }
+//
+//    @GetMapping("book-userRegistration")
+//    public ModelAndView userRegistration(){
+//        return new ModelAndView("book-userRegistration");
+//    }
 
 
 //    @GetMapping("/")
