@@ -1,6 +1,5 @@
 package com.example.demo.controller;
 
-
 import com.example.demo.model.User;
 import com.example.demo.service.impl.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,11 +10,9 @@ import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
 import java.util.List;
-
 
 @Controller
 public class UserController {
@@ -37,7 +34,6 @@ public class UserController {
             List<ObjectError> errors = bindingResult.getAllErrors();
             return "book-userRegistration";
         }
-//        model.addAttribute("user", user);
         userService.save(user);
         return "book-userRegistration";
     }

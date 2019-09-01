@@ -10,5 +10,3 @@ public class BookCatalogApplication {
 		SpringApplication.run(BookCatalogApplication.class, args);
 	}
 }
-
-//http://localhost:8080/

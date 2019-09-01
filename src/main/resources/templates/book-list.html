@@ -4,11 +4,6 @@
 <head>
     <meta charset="UTF-8">
         <title class="titlebar">BookCatalog</title>
-
-<!--    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/sketchy/bootstrap.min.css"-->
-<!--          rel="stylesheet"-->
-<!--          integrity="sha384-N8DsABZCqc1XWbg/bAlIDk7AS/yNzT5fcKzg/TwfmTuUqZhGquVmpb5VvfmLcMzp"-->
-<!--          crossorigin="anonymous">-->
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -26,9 +21,6 @@
     <div class="row">
         <div class="col">
             <form th:action="@{/book-list}" method="post" class="form-group my-2 my-lg-0 ">
-
-<!--                <input type="text" name="serchText">-->
-
                 <button class="btn btn-outline-success my-2 my-sm-0 ml-auto buttonRight" type="submit" >Search</button>
                 <input class="form-group col-md-2 mr-sm-4 ml-auto searchRight" type="search" name="searchText" placeholder="Search" aria-label="Search">
 
@@ -47,9 +39,6 @@
         <tr>
             <th scope="col ">Id</th>
             <th scope="col">Title</th>
-<!--            <th scope="col">Isbn</th>-->
-<!--            <th scope="col">Description</th>-->
-<!--            <th scope="col">Year</th>-->
             <th scope="col">Author</th>
             <th scope="col">Details</th>
             <th scope="col">Delete</th>
@@ -60,9 +49,6 @@
 
             <td th:text="${book.id}"/>
             <td th:text="${book.title}"/>
-<!--            <td th:text="${book.isbn}"/>-->
-<!--            <td th:text="${book.description}"/>-->
-<!--            <td th:text="${book.year}"/>-->
             <td th:text="${book.author}"/>
             <td>
                 <a th:href="@{'/book-detail?id=' + ${book.id}}" class="btn btn-outline-success">Details</a>

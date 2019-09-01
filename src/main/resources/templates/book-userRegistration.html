@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title class="titlebar">User Registration</title>
-<!--    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/sketchy/bootstrap.min.css"-->
-<!--          rel="stylesheet"-->
-<!--          integrity="sha384-N8DsABZCqc1XWbg/bAlIDk7AS/yNzT5fcKzg/TwfmTuUqZhGquVmpb5VvfmLcMzp"-->
-<!--          crossorigin="anonymous">-->
         <link rel="stylesheet"
               href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -34,9 +30,9 @@
             <p th:errors="${user.firstName}">First name errors</p>
             <p th:errors="${user.lastName}">Last name errors</p>
             <p th:errors="${user.email}">Email errors</p>
+            <p th:errors="${user.password}">Password errors</p>
 
-
-            <!--            <form th:action="@{/book-sukcesUserRegistration}" method="get" th:object="${user}">-->
+<!--            <form th:action="@{/book-sukcesUserRegistration}" method="get" th:object="${user}">-->
             <form th:action="@{/book-userRegistration}" method="post" th:object="${user}">
 
             <div>First name:</div> <input type="text" th:field="*{firstName}"  name="fname" placeholder="First Name" autocomplete="on"><br>
@@ -46,11 +42,6 @@
             <div>Email:</div> <input type="email" th:field="*{email}" email="email" placeholder="Email" autocomplete="on"><br>
 
             <div>Password:</div> <input type="password" th:field="*{password}" password="password" placeholder="Password" autocomplete="on"><br>
-
-<!--            <div>Password Again:</div><input th:field="*{passwordAgain}" type="passwordAgain"  passwordAgain="passwordAgain" placeholder="Password Again" autocomplete="on"><br>-->
-
-
-<!--            <div>Comment: </div><textarea rows="2" cols="40"></textarea>-->
 
             <tr>
             <td class="text-right">

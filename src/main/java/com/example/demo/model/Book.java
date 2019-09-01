@@ -3,13 +3,11 @@ package com.example.demo.model;
 import javax.persistence.*;
 import java.util.Objects;
 
-
 // http://localhost:8087/h2-console  do połaczenia z baza danych
 // jdbc:h2:mem:testdb
 
 @Entity
 public class Book {
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,8 +32,7 @@ public class Book {
         this.author = author;
     }
 
-    public Book(){
-    }
+    public Book(){ }
 
     public Long getId() {
         return id;

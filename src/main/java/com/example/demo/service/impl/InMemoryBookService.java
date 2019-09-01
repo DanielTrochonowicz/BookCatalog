@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.*;
 
-
 @Service
 class InMemoryBookService implements BookService {
 
@@ -50,7 +49,7 @@ class InMemoryBookService implements BookService {
                 2017, "B.V. Larson"));
 
         // Collections.sort(books, Comparator.comparing(b -> b.getId));
-        //   Collections.sort(books, Comparator.comparing(Book::getId));
+        // Collections.sort(books, Comparator.comparing(Book::getId));
 
 //        book = new Book();
 //        book.setTitle("Rana");

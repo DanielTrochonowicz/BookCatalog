@@ -1,8 +1,4 @@
 package com.example.demo.model;
-
-
-import org.hibernate.validator.constraints.UniqueElements;
-
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
@@ -25,14 +21,15 @@ public class User {
     private String lastName;
 
     @Email(message = "Błedny email")
+    @NotEmpty(message = "{com.example.projekt.model.User.email.NotEmpty}")
     private String email;
 
     @Column(unique = true)
     private String username;
 
+    @NotEmpty(message = "{com.example.projekt.model.User.password.NotEmpty}")
     private String password;
     private String passwordAgain;
-
 
     @ManyToOne
     @JoinColumn(name = "role_id")
@@ -54,9 +51,8 @@ public class User {
         this.role = role;
     }
 
-    //    do telefonu
-//    @Pattern(regexp="^\\d+$",
-//            message = "{com.example.projekt.model.User.phone.NotEmpty}")
+//    do telefonu
+//    @Pattern(regexp="^\\d+$", message = "{com.example.projekt.model.User.phone.NotEmpty}")
 
     public User(String firstName, String lastName, String email, String password, String passwordAgain) {
 
@@ -67,9 +63,7 @@ public class User {
         this.passwordAgain = passwordAgain;
     }
 
-    public User(){
-
-    }
+    public User(){ }
 
     public String getFirstName() {
         return firstName;
@@ -113,7 +107,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User: " +
+        return  "User: " +
                 "FirstName: " + firstName + '\'' +
                 "LastName: " + lastName + '\'' +
                 "Email: " + email + '\'' +

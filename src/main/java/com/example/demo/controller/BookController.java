@@ -71,18 +71,14 @@ public class BookController {
     public ModelAndView bookLogin(){
        return new ModelAndView("book-userLogin");
     }
-//
 //    @GetMapping("book-userRegistration")
 //    public ModelAndView userRegistration(){
 //        return new ModelAndView("book-userRegistration");
 //    }
-
-
 //    @GetMapping("/")
 //    public ModelAndView forward() {
 //        return new ModelAndView("forward:/books");  !! never add commented code !!
 //    }
-
     @GetMapping("book-add")
     public ModelAndView updateBook() {
         ModelAndView modelAndView = new ModelAndView("book-add");
@@ -114,7 +110,6 @@ public class BookController {
 //        modelUser.addAttribute("user", new User());
 //        return "book-userRegistration";
 //    }
-//
 //    @PostMapping("/book-sukcesUserRegistration")
 //    public String userRegistrationPost(@ModelAttribute User user){
 //        return "book-sukcesUserRegistration";
