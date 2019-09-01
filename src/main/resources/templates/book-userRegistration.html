@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title class="titlebar">User Registration</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/sketchy/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-N8DsABZCqc1XWbg/bAlIDk7AS/yNzT5fcKzg/TwfmTuUqZhGquVmpb5VvfmLcMzp"
-          crossorigin="anonymous">
-<!--        <link rel="stylesheet"-->
-<!--              href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"-->
-<!--              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"-->
-<!--              crossorigin="anonymous">-->
+<!--    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/sketchy/bootstrap.min.css"-->
+<!--          rel="stylesheet"-->
+<!--          integrity="sha384-N8DsABZCqc1XWbg/bAlIDk7AS/yNzT5fcKzg/TwfmTuUqZhGquVmpb5VvfmLcMzp"-->
+<!--          crossorigin="anonymous">-->
+        <link rel="stylesheet"
+              href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+              crossorigin="anonymous">
 
         <link rel="stylesheet" href="css/style.css">
 </head>
@@ -31,11 +31,11 @@
         <h1>User Registration</h1>
             </legend>
 
-<!--            <form th:action="@{/book-sukcesUserRegistration}" method="get" th:object="${user}">-->
-            <form th:action="@{/book-sukcesUserRegistration}" method="post" th:object="${user}">
+            <p th:errors="${user.firstName}">First name errors</p>
 
-<!--                th:field="*{firstName}"-->
 
+            <!--            <form th:action="@{/book-sukcesUserRegistration}" method="get" th:object="${user}">-->
+            <form th:action="@{/book-userRegistration}" method="post" th:object="${user}">
 
             <div>First name:</div> <input type="text" th:field="*{firstName}"  name="fname" placeholder="First Name" autocomplete="on"><br>
 

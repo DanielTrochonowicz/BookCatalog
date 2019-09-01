@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
 import java.util.Objects;
 
 @Entity
@@ -13,6 +15,8 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Pattern(regexp = "[a-zA-Z]+$", message = "Błędne imie")
+    @NotEmpty(message="{com.example.projekt.model.User.firstName.NotEmpty}")
     private String firstName;
     private String lastName;
     private String email;
