@@ -1,10 +1,10 @@
 package com.example.demo.model;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.hibernate.validator.constraints.UniqueElements;
+
+import javax.persistence.*;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
 import java.util.Objects;
@@ -15,14 +15,48 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Pattern(regexp = "[a-zA-Z]+$", message = "Błędne imie")
     @NotEmpty(message="{com.example.projekt.model.User.firstName.NotEmpty}")
     private String firstName;
+
+    @Pattern(regexp = "[a-zA-Z]+$", message = "Błędne nazwisko")
+    @NotEmpty(message="{com.example.projekt.model.User.lastName.NotEmpty}")
     private String lastName;
+
+    @Email(message = "Błedny email")
     private String email;
+
+    @Column(unique = true)
+    private String username;
+
     private String password;
     private String passwordAgain;
 
+
+    @ManyToOne
+    @JoinColumn(name = "role_id")
+    private Role role;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    //    do telefonu
+//    @Pattern(regexp="^\\d+$",
+//            message = "{com.example.projekt.model.User.phone.NotEmpty}")
 
     public User(String firstName, String lastName, String email, String password, String passwordAgain) {
 

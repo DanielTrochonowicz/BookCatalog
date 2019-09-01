@@ -32,6 +32,8 @@
             </legend>
 
             <p th:errors="${user.firstName}">First name errors</p>
+            <p th:errors="${user.lastName}">Last name errors</p>
+            <p th:errors="${user.email}">Email errors</p>
 
 
             <!--            <form th:action="@{/book-sukcesUserRegistration}" method="get" th:object="${user}">-->
@@ -50,8 +52,6 @@
 
 <!--            <div>Comment: </div><textarea rows="2" cols="40"></textarea>-->
 
-
-
             <tr>
             <td class="text-right">
                 <form >
@@ -63,6 +63,7 @@
         </form>
         </fieldset>
             <fieldset class="borderRegistration">
+
             <tr class="br brRight brLef">
                 <td >
                     <div class="shadowText"><h3>Have an account?</h3></div><a  th:href="@{/book-userLogin}" ><button type="button" class="btn btn-outline-secondary">Log in</button></a>
