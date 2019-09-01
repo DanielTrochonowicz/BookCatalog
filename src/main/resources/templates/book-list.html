@@ -25,9 +25,18 @@
 <div class="container marginTopBoxBooks">
     <div class="row">
         <div class="col">
-            <form class="form-group my-2 my-lg-0 ">
-                <button class="btn btn-outline-success my-2 my-sm-0 ml-auto buttonRight" type="submit">Search</button>
-                <input class="form-group col-md-2 mr-sm-4 ml-auto searchRight" type="search" placeholder="Search" aria-label="Search">
+            <form th:action="@{/book-list}" method="post" class="form-group my-2 my-lg-0 ">
+
+<!--                <input type="text" name="serchText">-->
+
+                <button class="btn btn-outline-success my-2 my-sm-0 ml-auto buttonRight" type="submit" >Search</button>
+                <input class="form-group col-md-2 mr-sm-4 ml-auto searchRight" type="search" name="searchText" placeholder="Search" aria-label="Search">
+
+                <select name="searchParameter" class="buttonRight">
+                    <option value="Author">Author</option>
+                    <option value="Title">Title</option>
+                </select>
+
                   </form>
             <h5>Books</h5>
 

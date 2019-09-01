@@ -14,11 +14,18 @@ public class ServisBook {
     @Autowired
     private BookRepository bookRepository;
 
-//    public void save(Book book){
-//        servisBook.save(book);
-//    }
-
     public List<Book> findAll(){
         return bookRepository.findAll();
+    }
+
+    public List<Book> searchBook(String searchText, String searchParameter){
+        switch (searchParameter){
+            case "Title":
+                return  bookRepository.findByTitle(searchText);
+            case "Author":
+                return bookRepository.findByAuthor(searchText);
+            default:
+                return bookRepository.findAll();
+        }
     }
 }

@@ -7,8 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 
@@ -26,5 +28,11 @@ public class AdminSerchController {
         modelAndView.addObject("books", servisBook.findAll());
         return modelAndView;
     }
+    @PostMapping("book-list")
+    public String serchBook(@RequestParam String searchText,
+                            @RequestParam String searchParameter, Model model){
 
+        model.addAttribute("books", servisBook.searchBook(searchText, searchParameter));
+            return "book-list";
+        }
 }
