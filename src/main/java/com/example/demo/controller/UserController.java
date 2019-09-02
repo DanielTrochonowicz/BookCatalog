@@ -35,7 +35,7 @@ public class UserController {
             return "book-userRegistration";
         }
         userService.save(user);
-        return "book-userRegistration";
+        return "book-sukcesUserRegistration";
     }
 
 //    @GetMapping("book-userRegistration")
@@ -45,9 +45,9 @@ public class UserController {
 //        return modelAndView;
 //    }
 
-//    @PostMapping("/book-sukcesUserRegistration")
-//    public String userRegistrationPost(@ModelAttribute User user){
-//        userService.save(user);
-//        return "book-sukcesUserRegistration";
-//    }
+    @PostMapping("/book-sukcesUserRegistration")
+    public String userRegistrationPost(@ModelAttribute User user){
+        userService.save(user);
+        return "book-sukcesUserRegistration";
+    }
 }
