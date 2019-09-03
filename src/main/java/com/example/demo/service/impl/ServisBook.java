@@ -16,7 +16,7 @@ public class ServisBook {
     }
 
     public List<Book> search(){
-        return bookRepository.search("Wyrok","Remigiusz Mróz");
+        return bookRepository.findAll();
     }
 
     public List<Book> searchBook(String searchText, String searchParameter){
