@@ -4,6 +4,7 @@ import com.example.demo.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ServisBook {
@@ -18,6 +19,12 @@ public class ServisBook {
     public List<Book> search(){
         return bookRepository.findAll();
     }
+
+//    public Optional<Book> getBookEdit(long id) {
+//        return bookRepository.findById(id);
+//    }
+
+
 
     public List<Book> searchBook(String searchText, String searchParameter){
         switch (searchParameter){

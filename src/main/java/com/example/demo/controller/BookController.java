@@ -5,11 +5,11 @@ import com.example.demo.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.Optional;
 
 @Controller
 public class BookController {
@@ -104,6 +104,13 @@ public class BookController {
         bookService.removeBook(book.getId());
         return new ModelAndView("redirect:/book-list");
     }
+
+//    @GetMapping("book-edit")
+//    public String bookedit(@PathVariable long id, Model model) {
+//        Optional<Book> book = (bookService.getBook(id));
+//        model.addAttribute("book", book.get());
+//        return "book-add";
+//    }
 
 //    @GetMapping("/book-userRegistration")
 //    public String userRegistrationGet(Model modelUser){
