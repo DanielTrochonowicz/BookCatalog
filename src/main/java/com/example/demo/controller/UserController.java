@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.model.Role;
 import com.example.demo.model.User;
 import com.example.demo.service.impl.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +39,10 @@ public class UserController {
             List<ObjectError> errors = bindingResult.getAllErrors();
             return "book-userRegistration";
         }
+        Role role = new Role();  //<- role do security
+        role.setRole("USER");
+        user.setRole(role);
+
         userService.save(user);
         return "book-sukcesUserRegistration";
     }

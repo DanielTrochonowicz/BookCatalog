@@ -24,9 +24,10 @@
             <legend class="legendRegistration legendLogin">
         <h1>Book Catalog </h1>
             </legend>
-        <form action="formRegistration" method="POST">
-            <div>Login:</div> <input type="email" email="email" placeholder="Email Login" autocomplete="on"><br>
-            <div>Password:</div> <input type="password" password="password" placeholder="Password" autocomplete="on"><br>
+<!--            <form th:action="@{/logowanie}" method="post">-->
+        <form th:action="@{/logowanie}" method="POST">
+            <div>Login:</div> <input  name="email" type="email" email="email" placeholder="Email Login" autocomplete="on"><br>
+            <div>Password:</div> <input name="password" type="password"  password="password" placeholder="Password" autocomplete="on"><br>
 
             <td class="p">
                 <button class="btn btn-outline-warning buttonTopLogin" type="reset" value="Reset">  Reset</button>
